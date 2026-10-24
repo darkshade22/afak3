@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afak Study Consulting | Study Abroad, International Admissions & Boarding Kénitra</title>
+  <meta name="description" content="Premier study abroad educational consultancy in Kénitra, Morocco. Guaranteed admissions in France (Campus France), Germany, Spain, Canada, UK, and Romania. Visa support, student boarding, and scholarships.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232563EB'/><text x='50%' y='68%' font-size='60' font-weight='900' fill='white' text-anchor='middle' font-family='sans-serif'>A</text></svg>">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: English/French (Plus Jakarta Sans, Outfit) & Arabic (Cairo, Tajawal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables for Dynamic Light & Dark Theme */
+    :root {
+      /* LIGHT MODE: Clean, Trustworthy, Modern Academic Look */
+      --bg-primary: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: rgba(255, 255, 255, 0.90);
+      --bg-card-solid: #ffffff;
+      --border-subtle: #e2e8f0;
+      --border-accent: rgba(37, 99, 235, 0.28);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-subtle: #94a3b8;
+      --brand-primary: #2563eb;
+      --brand-hover: #1d4ed8;
+      --brand-cyan: #0284c7;
+      --brand-emerald: #059669;
+      --brand-amber: #d97706;
+      --brand-glow: rgba(37, 99, 235, 0.10);
+      --nav-glass: rgba(255, 255, 255, 0.92);
+      --shadow-elevation: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+      --shadow-floating: 0 20px 35px -5px rgba(37, 99, 235, 0.16);
+      --globe-dot: rgba(100, 116, 139, 0.45);
+      --globe-halo: rgba(37, 99, 235, 0.05);
+    }
+
+    html.dark {
+      /* DARK MODE: Midnight Slate & Electric Azure */
+      --bg-primary: #070d1e;
+      --bg-surface: #0e172e;
+      --bg-card: rgba(14, 23, 46, 0.85);
+      --bg-card-solid: #0e172e;
+      --border-subtle: rgba(56, 189, 248, 0.16);
+      --border-accent: rgba(56, 189, 248, 0.4);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      --brand-primary: #38bdf8;
+      --brand-hover: #0ea5e9;
+      --brand-cyan: #22d3ee;
+      --brand-emerald: #10b981;
+      --brand-amber: #fbbf24;
+      --brand-glow: rgba(56, 189, 248, 0.22);
+      --nav-glass: rgba(14, 23, 46, 0.88);
+      --shadow-elevation: 0 15px 35px -5px rgba(0, 0, 0, 0.45);
+      --shadow-floating: 0 25px 45px -5px rgba(56, 189, 248, 0.22);
+      --globe-dot: rgba(148, 163, 184, 0.55);
+      --globe-halo: rgba(56, 189, 248, 0.08);
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.35s ease, color 0.35s ease;
+      overflow-x: hidden;
+    }
+
+    /* Arabic Typography Support */
+    html[dir="rtl"] body {
+      font-family: 'Tajawal', 'Cairo', sans-serif;
+    }
+
+    .font-display {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    }
+    html[dir="rtl"] .font-display {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+    }
+
+    .font-code {
+      font-family: 'Space Grotesk', monospace;
+    }
+
+    /* Glass Panels */
+    .glass-surface {
+      background: var(--bg-card);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-elevation);
+    }
+
+    .glass-nav {
+      background: var(--nav-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-elevation);
+    }
+
+    /* 3D Motion Stage */
+    .perspective-stage {
+      perspective: 1200px;
+    }
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+
+    /* Floating keyframes */
+    @keyframes float-sine-1 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+    }
+    @keyframes float-sine-2 {
+      0%, 100% { transform: translateY(0px) rotate(-1deg); }
+      50% { transform: translateY(-15px) rotate(1.5deg); }
+    }
+    .animate-float-1 { animation: float-sine-1 6.5s infinite ease-in-out; }
+    .animate-float-2 { animation: float-sine-2 7.5s 1s infinite ease-in-out; }
+
+    /* Ambient Lighting */
+    .ambient-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.7;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--border-subtle); border-radius: 4px; }
+  </style>
+</head>
+<body class="selection:bg-blue-600 selection:text-white antialiased">
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow top-0 right-10 w-[500px] h-[500px]" style="background: radial-gradient(circle, var(--brand-glow) 0%, transparent 70%);"></div>
+  <div class="ambient-glow top-[700px] left-5 w-[450px] h-[450px]" style="background: radial-gradient(circle, var(--brand-glow) 0%, transparent 70%);"></div>
+
+  <!-- TOP BAR: Social Media Links, Location & Quick Contact -->
+  <div class="border-b transition-colors" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 text-xs flex flex-wrap items-center justify-between gap-3" style="color: var(--text-muted);">
+      
+      <!-- Left: Location & Direct Coordinates -->
+      <div class="flex items-center gap-3">
+        <a href="#location" class="flex items-center gap-1.5 hover:text-blue-500 transition-colors font-medium">
+          <span>📍</span>
+          <span data-i18n="topLocation">Kénitra Headquarters: 34.2581, -6.5818</span>
+        </a>
+        <span class="opacity-40">•</span>
+        <span class="hidden sm:inline" data-i18n="topAccreditation">Certified International Education Advisory</span>
+      </div>
+
+      <!-- Right: Social Media Links (Instagram & Facebook) + WhatsApp -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Official Instagram Link -->
+        <a href="https://www.instagram.com/afak_consulting/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold hover:opacity-90 transition-all shadow-sm text-white" style="background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>@afak_consulting</span>
+        </a>
+
+        <!-- Official Facebook Link -->
+        <a href="https://www.facebook.com/search/top?q=Afak%20Study%20Consulting" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#1877F2] text-white hover:bg-[#166fe5] transition-all shadow-sm">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.833C10.5 0 9 1.5 9 4.333V8z"/></svg>
+          <span>Facebook</span>
+        </a>
+
+        <!-- WhatsApp Direct -->
+        <a href="https://wa.me/212600000000" target="_blank" rel="noopener" class="hidden md:flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500 text-white hover:bg-emerald-600 transition-all shadow-sm">
+          <span>💬 +212 600-000000</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING CAPSULE HEADER WITH THEME & LANGUAGE CONTROLS -->
+  <div class="sticky top-3 z-40 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <header id="main-header" class="glass-nav rounded-full px-4 sm:px-5 py-3 flex items-center justify-between shadow-xl transition-all duration-300">
+      
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center font-display font-black text-white text-lg shadow-md transition-transform group-hover:scale-105" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));">
+          A
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-sm sm:text-base tracking-tight flex items-center gap-1.5" style="color: var(--text-main);">
+            <span>AFAK</span>
+            <span class="text-[10px] font-code px-1.5 py-0.5 rounded font-bold" style="background-color: var(--brand-glow); color: var(--brand-primary);">STUDY</span>
+          </div>
+          <div class="text-[9px] uppercase tracking-wider" style="color: var(--text-subtle);">Consulting & Boarding</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-1 p-1 rounded-full text-xs font-semibold" style="background-color: rgba(125, 125, 125, 0.08); color: var(--text-muted);">
+        <a href="#hero" class="px-3 py-1.5 rounded-full transition-colors" style="background-color: var(--bg-surface); color: var(--text-main);" data-i18n="navHome">Home</a>
+        <a href="#about" class="px-3 py-1.5 rounded-full hover:text-blue-500 transition-colors" data-i18n="navAbout">About Us</a>
+        <a href="#destinations" class="px-3 py-1.5 rounded-full hover:text-blue-500 transition-colors" data-i18n="navDestinations">Destinations</a>
+        <a href="#services" class="px-3 py-1.5 rounded-full hover:text-blue-500 transition-colors" data-i18n="navServices">Services</a>
+        <a href="#roadmap" class="px-3 py-1.5 rounded-full hover:text-blue-500 transition-colors" data-i18n="navSteps">4-Steps</a>
+        <a href="#faq" class="px-3 py-1.5 rounded-full hover:text-blue-500 transition-colors" data-i18n="navFaq">FAQ</a>
+        <a href="#location" class="px-3 py-1.5 rounded-full hover:text-blue-500 transition-colors" data-i18n="navOffice">Kénitra Office</a>
+      </nav>
+
+      <!-- Right Controls: 3-Language Segmented Switcher + Dark/Light Toggle + CTA -->
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        
+        <!-- STYLISH 3-LANGUAGE SELECTOR (English - French - Arabic) -->
+        <div class="flex items-center p-0.5 rounded-full border text-xs font-bold" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+          <button onclick="setLanguage('en')" id="lang-en" class="px-2 py-1 rounded-full transition-all text-white bg-blue-600 shadow-sm text-[11px]" title="English">
+            EN
+          </button>
+          <button onclick="setLanguage('fr')" id="lang-fr" class="px-2 py-1 rounded-full transition-all hover:text-blue-500 text-[11px]" style="color: var(--text-muted);" title="Français">
+            FR
+          </button>
+          <button onclick="setLanguage('ar')" id="lang-ar" class="px-2 py-1 rounded-full transition-all hover:text-blue-500 text-[11px]" style="color: var(--text-muted);" title="العربية">
+            العربية
+          </button>
+        </div>
+
+        <!-- DARK / LIGHT MODE TOGGLE BUTTON -->
+        <button onclick="toggleTheme()" id="theme-btn" class="p-2 rounded-full border hover:scale-105 transition-all text-xs flex items-center justify-center" style="background-color: var(--bg-surface); border-color: var(--border-subtle); color: var(--text-main);" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <span id="theme-icon" class="text-sm">🌙</span>
+        </button>
+
+        <!-- Apply CTA Button -->
+        <button onclick="openBookingModal()" class="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-full font-bold text-xs text-white shadow-md transition-all transform hover:scale-105" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));">
+          <span data-i18n="ctaApply">Apply Now</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-full border hover:bg-slate-100 dark:hover:bg-slate-800" style="border-color: var(--border-subtle); color: var(--text-main);" aria-label="Toggle Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+
+      </div>
+
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-2 glass-nav rounded-2xl p-5 border shadow-2xl space-y-3 text-sm" style="border-color: var(--border-subtle);">
+      <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 font-medium" style="color: var(--text-main);" data-i18n="navHome">Home</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block py-2 font-medium" style="color: var(--text-muted);" data-i18n="navAbout">About Us</a>
+      <a href="#destinations" onclick="toggleMobileMenu()" class="block py-2 font-medium" style="color: var(--text-muted);" data-i18n="navDestinations">Destinations</a>
+      <a href="#services" onclick="toggleMobileMenu()" class="block py-2 font-medium" style="color: var(--text-muted);" data-i18n="navServices">Services</a>
+      <a href="#roadmap" onclick="toggleMobileMenu()" class="block py-2 font-medium" style="color: var(--text-muted);" data-i18n="navSteps">4-Steps</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 font-medium" style="color: var(--text-muted);" data-i18n="navFaq">FAQ</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block py-2 font-medium" style="color: var(--text-muted);" data-i18n="navOffice">Kénitra Office</a>
+      <div class="pt-3 border-t flex flex-col gap-2" style="border-color: var(--border-subtle);">
+        <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full py-2.5 rounded-full font-bold text-xs text-white text-center shadow-md" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));" data-i18n="ctaApply">
+          Schedule Consultation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION WITH 3D MOTION -->
+  <section id="hero" class="relative pt-10 sm:pt-16 pb-16 perspective-stage overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-6 z-10">
+          
+          <!-- Pill Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold border shadow-sm" style="background-color: var(--bg-surface); border-color: var(--border-accent); color: var(--brand-primary);">
+            <span class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-emerald);"></span>
+            <span data-i18n="heroBadge">Accredited Overseas Study & Boarding Placement</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight" style="color: var(--text-main);">
+            <span data-i18n="heroTitle1">Where Global Ambition</span> <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan), var(--brand-emerald));" data-i18n="heroTitle2">
+              Creates Excellence
+            </span>
+          </h1>
+
+          <!-- Lead Narrative -->
+          <p class="text-base sm:text-lg max-w-xl leading-relaxed" style="color: var(--text-muted);" data-i18n="heroDesc">
+            Direct university admissions and international boarding across France, Germany, Spain, Canada, the UK, and Romania. End-to-end guidance from campus orientation to guaranteed visa approval in our Kénitra counseling center.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-1">
+            <a href="#destinations" class="px-6 py-3.5 rounded-full font-bold text-xs sm:text-sm text-white flex items-center gap-2.5 shadow-lg transition-all transform hover:scale-105" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan)); box-shadow: var(--shadow-floating);">
+              <span data-i18n="btnExplore">Explore Universities</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            
+            <button onclick="openBookingModal()" class="flex items-center gap-2 px-5 py-3 rounded-full text-xs sm:text-sm font-bold border transition-all hover:scale-105" style="background-color: var(--bg-surface); border-color: var(--border-subtle); color: var(--text-main);">
+              <span data-i18n="btnConsult">Book Free Counseling</span>
+            </button>
+          </div>
+
+          <!-- Social Proof & Ratings (Reference Inspiration) -->
+          <div class="pt-6 border-t flex flex-wrap items-center gap-8" style="border-color: var(--border-subtle);">
+            <div>
+              <div class="flex items-center gap-1 text-sm text-amber-500">
+                ★★★★★ <span class="font-bold text-base ml-1" style="color: var(--text-main);">4.9</span><span class="text-xs" style="color: var(--text-subtle);">/5</span>
+              </div>
+              <div class="text-xs mt-0.5" style="color: var(--text-muted);" data-i18n="proofRating">Verified Alumni Reviews (Kénitra)</div>
+            </div>
+
+            <!-- Avatars with Real Student Photos -->
+            <div class="flex items-center gap-3">
+              <div class="flex -space-x-3 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Student" class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Student" class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Student" class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Student" class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover">
+              </div>
+              <div class="text-xs">
+                <span class="font-bold block" style="color: var(--text-main);" data-i18n="proofStudents">2,850+ Students Placed</span>
+                <span style="color: var(--text-muted);" data-i18n="proofCountries">In top faculties across 28 nations</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: 3D Motion Stage (Canvas Globe + Parallax Cards) -->
+        <div class="lg:col-span-5 relative flex justify-center items-center py-4">
+          
+          <div id="hero-3d-stage" class="relative w-full max-w-[420px] h-[480px] preserve-3d transition-transform duration-200 ease-out cursor-grab active:cursor-grabbing">
+            
+            <!-- 3D Interactive Canvas: Glowing Globe with Real Flights from Kénitra -->
+            <canvas id="globeCanvas" width="400" height="400" class="absolute inset-0 m-auto rounded-full pointer-events-auto opacity-95"></canvas>
+
+            <!-- Card 1: Official University Admission Letter Mockup -->
+            <div id="card-admission" class="absolute top-2 -left-3 w-64 glass-surface p-4 rounded-2xl shadow-xl border transform preserve-3d animate-float-1" style="transform: translateZ(55px) rotateY(-10deg) rotateX(6deg); border-color: var(--border-accent);">
+              <div class="flex items-center justify-between pb-2 border-b text-xs" style="border-color: var(--border-subtle);">
+                <span class="flex items-center gap-1.5 font-bold" style="color: var(--brand-emerald);">
+                  <span class="w-2 h-2 rounded-full" style="background-color: var(--brand-emerald);"></span> ADMISSION VALIDATED
+                </span>
+                <span class="text-[10px] font-code" style="color: var(--text-subtle);">FALL 2026</span>
+              </div>
+              <div class="mt-2.5">
+                <div class="text-[10px] uppercase font-bold" style="color: var(--text-subtle);">Candidate Placement:</div>
+                <div class="font-display font-bold text-sm" style="color: var(--text-main);">Sorbonne Université • Paris</div>
+                <div class="text-xs font-code mt-0.5 font-medium" style="color: var(--brand-primary);">Faculté des Sciences</div>
+              </div>
+              <div class="mt-3 pt-2 border-t flex items-center justify-between text-[11px]" style="border-color: var(--border-subtle);">
+                <span style="color: var(--text-muted);">Campus France:</span>
+                <span class="font-semibold" style="color: var(--brand-emerald);">Dossier Validé ✓</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Visa Approval & Boarding Card -->
+            <div id="card-visa" class="absolute bottom-6 -right-2 w-64 glass-surface p-4 rounded-2xl shadow-xl border transform preserve-3d animate-float-2" style="transform: translateZ(90px) rotateY(12deg) rotateX(-5deg); border-color: var(--border-subtle);">
+              <div class="flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">✈️</span>
+                  <div>
+                    <div class="font-bold text-xs" style="color: var(--text-main);">Study Visa Granted</div>
+                    <div class="text-[10px]" style="color: var(--text-muted);">Kénitra ➔ Munich, Germany</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded-full text-[9px] font-bold border" style="background-color: var(--brand-glow); color: var(--brand-primary); border-color: var(--border-accent);">SCHENGEN D</span>
+              </div>
+              <div class="mt-3 p-2.5 rounded-xl border space-y-1 text-[11px]" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+                <div class="flex justify-between" style="color: var(--text-muted);">
+                  <span>Blocked Account:</span>
+                  <span class="font-code font-semibold" style="color: var(--brand-emerald);">€11,208 Verified</span>
+                </div>
+                <div class="flex justify-between" style="color: var(--text-muted);">
+                  <span>Accommodation:</span>
+                  <span class="font-semibold" style="color: var(--brand-primary);">Attestation Ready</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Floating Success Badge -->
+            <div class="absolute -bottom-2 left-6 glass-surface px-4 py-2.5 rounded-2xl border shadow-xl flex items-center gap-3 transform preserve-3d" style="transform: translateZ(125px); border-color: var(--border-accent);">
+              <div class="w-9 h-9 rounded-xl text-white font-extrabold flex items-center justify-center text-base shadow-sm" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));">
+                ★
+              </div>
+              <div>
+                <div class="font-display font-extrabold text-sm" style="color: var(--text-main);">98.7% Success</div>
+                <div class="text-[10px]" style="color: var(--text-muted);">Morocco Study Visa Approval</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- LOWER HERO: 4 Feature Teaser Cards (Rich Details with Imagery) -->
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="glass-surface p-5 rounded-2xl border hover:border-blue-500 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-code font-bold" style="color: var(--brand-primary);">01 / ORIENTATION</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full font-semibold" style="background-color: var(--brand-glow); color: var(--brand-primary);" data-i18n="feat1Tag">Free Audit</span>
+            </div>
+            <h3 class="font-display font-bold text-base mt-3" style="color: var(--text-main);" data-i18n="feat1Title">Academic Roadmap</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-muted);" data-i18n="feat1Desc">Personalized major matching based on your Moroccan BAC, BTS, License, or Master degree.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t flex items-center justify-between text-xs" style="border-color: var(--border-subtle);">
+            <span class="font-semibold" style="color: var(--brand-primary);">BAC to Master</span>
+            <span style="color: var(--text-muted);">Audit 48h</span>
+          </div>
+        </div>
+
+        <div class="glass-surface p-5 rounded-2xl border hover:border-emerald-500 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-code font-bold" style="color: var(--brand-emerald);">02 / ADMISSIONS</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full font-semibold" style="background-color: rgba(16, 185, 129, 0.1); color: var(--brand-emerald);" data-i18n="feat2Tag">Top 100</span>
+            </div>
+            <h3 class="font-display font-bold text-base mt-3" style="color: var(--text-main);" data-i18n="feat2Title">University Placement</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-muted);" data-i18n="feat2Desc">Direct agreements with accredited public and private European institutions and boarding colleges.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t flex items-center justify-between text-xs" style="border-color: var(--border-subtle);">
+            <span class="font-semibold" style="color: var(--brand-emerald);">140+ Partner Campuses</span>
+            <span style="color: var(--text-muted);">Direct Enrolment</span>
+          </div>
+        </div>
+
+        <div class="glass-surface p-5 rounded-2xl border hover:border-amber-500 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-code font-bold" style="color: var(--brand-amber);">03 / FORMALITIES</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full font-semibold" style="background-color: rgba(245, 158, 11, 0.1); color: var(--brand-amber);" data-i18n="feat3Tag">Visa Prep</span>
+            </div>
+            <h3 class="font-display font-bold text-base mt-3" style="color: var(--text-main);" data-i18n="feat3Title">Visa & Campus France</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-muted);" data-i18n="feat3Desc">Rigorous interview preparation, financial proof optimization, and blocked account setup.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t flex items-center justify-between text-xs" style="border-color: var(--border-subtle);">
+            <span class="font-semibold" style="color: var(--brand-amber);">Consulate Simulations</span>
+            <span style="color: var(--text-muted);">98.7% Success</span>
+          </div>
+        </div>
+
+        <div class="glass-surface p-5 rounded-2xl border hover:border-purple-500 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-code font-bold text-purple-500">04 / ONBOARD</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full font-semibold bg-purple-500/10 text-purple-500" data-i18n="feat4Tag">Housing</span>
+            </div>
+            <h3 class="font-display font-bold text-base mt-3" style="color: var(--text-main);" data-i18n="feat4Title">Boarding & Housing</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-muted);" data-i18n="feat4Desc">Guaranteed housing certificate (Attestation de logement) and airport pick-up upon arrival.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t flex items-center justify-between text-xs" style="border-color: var(--border-subtle);">
+            <span class="font-semibold text-purple-500">Certified Attestation</span>
+            <span style="color: var(--text-muted);">Airport Meet</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: ABOUT US (Enhanced with Real High-Res Photography & Values) -->
+  <section id="about" class="py-20 border-t" style="border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Visual: High-Res Real Student Photography -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border" style="border-color: var(--border-subtle);">
+            <img 
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" 
+              alt="Afak Study Students Collaborating" 
+              class="w-full h-[430px] object-cover hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            
+            <!-- Inset Badge -->
+            <div class="absolute bottom-5 left-5 right-5 glass-surface p-4 rounded-2xl border" style="border-color: var(--border-accent);">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-display font-bold text-sm text-slate-900 dark:text-white" data-i18n="aboutBadgeTitle">Empowering Moroccan Youth</div>
+                  <div class="text-[11px]" style="color: var(--text-muted);" data-i18n="aboutBadgeSub">Over 2,850 successful admissions since 2014</div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-xs font-bold text-white bg-blue-600">100% Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text, Vision & 4 Core Commitments -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold border shadow-sm" style="background-color: var(--bg-surface); border-color: var(--border-accent); color: var(--brand-primary);" data-i18n="aboutPill">
+            About Afak Study Consulting
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl leading-tight" style="color: var(--text-main);">
+            <span data-i18n="aboutTitle1">Your Trusted Bridge Between Morocco</span> <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));" data-i18n="aboutTitle2">
+              And The World's Top Campuses
+            </span>
+          </h2>
+
+          <p class="text-sm sm:text-base leading-relaxed" style="color: var(--text-muted);" data-i18n="aboutDesc">
+            Studying abroad is one of the most important investments in your life. Headquartered in Kénitra, Afak Study Consulting was founded with one clear mission: to provide Moroccan students and families with honest, transparent, and certified guidance through every stage of international higher education.
+          </p>
+
+          <!-- 4 Core Pillars Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="glass-surface p-4 rounded-2xl border" style="border-color: var(--border-subtle);">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold mb-2.5" style="background-color: var(--brand-glow); color: var(--brand-primary);">01</div>
+              <h4 class="font-display font-bold text-sm" style="color: var(--text-main);" data-i18n="pillar1Title">Zero-Bureaucracy Tracking</h4>
+              <p class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="pillar1Desc">We manage Campus France, UNEDasiss, and Uni-Assist platforms so you never miss a deadline.</p>
+            </div>
+
+            <div class="glass-surface p-4 rounded-2xl border" style="border-color: var(--border-subtle);">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold mb-2.5" style="background-color: rgba(16, 185, 129, 0.1); color: var(--brand-emerald);">02</div>
+              <h4 class="font-display font-bold text-sm" style="color: var(--text-main);" data-i18n="pillar2Title">Proven Visa Track Record</h4>
+              <p class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="pillar2Desc">Mock consulate interviews and verified financial guarantees resulting in 98.7% visa acceptance.</p>
+            </div>
+
+            <div class="glass-surface p-4 rounded-2xl border" style="border-color: var(--border-subtle);">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold mb-2.5" style="background-color: rgba(245, 158, 11, 0.1); color: var(--brand-amber);">03</div>
+              <h4 class="font-display font-bold text-sm" style="color: var(--text-main);" data-i18n="pillar3Title">Boarding & Housing Security</h4>
+              <p class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="pillar3Desc">Official housing contracts and student residences ready before you attend your visa appointment.</p>
+            </div>
+
+            <div class="glass-surface p-4 rounded-2xl border" style="border-color: var(--border-subtle);">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold mb-2.5 text-purple-500 bg-purple-500/10">04</div>
+              <h4 class="font-display font-bold text-sm" style="color: var(--text-main);" data-i18n="pillar4Title">Alumni Network in 28 Countries</h4>
+              <p class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="pillar4Desc">Connect with former Moroccan students already settled in Paris, Munich, Montreal, and Madrid.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- KEY STATISTICAL COUNTER GRID (Optibiz Inspiration) -->
+      <div class="mt-16 pt-12 border-t grid grid-cols-2 lg:grid-cols-4 gap-6 text-center" style="border-color: var(--border-subtle);">
+        
+        <div class="p-6 glass-surface rounded-2xl">
+          <div class="font-display font-black text-4xl sm:text-5xl" style="color: var(--brand-primary);">12<span class="text-blue-400">+</span></div>
+          <div class="font-bold text-sm mt-2" style="color: var(--text-main);" data-i18n="stat1Title">Years Experience</div>
+          <div class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="stat1Desc">Guiding Moroccan students</div>
+        </div>
+
+        <div class="p-6 glass-surface rounded-2xl">
+          <div class="font-display font-black text-4xl sm:text-5xl" style="color: var(--brand-emerald);">2,850<span class="text-emerald-400">+</span></div>
+          <div class="font-bold text-sm mt-2" style="color: var(--text-main);" data-i18n="stat2Title">Students Admitted</div>
+          <div class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="stat2Desc">Undergrad & Postgrad</div>
+        </div>
+
+        <div class="p-6 glass-surface rounded-2xl">
+          <div class="font-display font-black text-4xl sm:text-5xl" style="color: var(--brand-cyan);">98.7<span class="text-sky-400">%</span></div>
+          <div class="font-bold text-sm mt-2" style="color: var(--text-main);" data-i18n="stat3Title">Visa Success</div>
+          <div class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="stat3Desc">Proven compliance record</div>
+        </div>
+
+        <div class="p-6 glass-surface rounded-2xl">
+          <div class="font-display font-black text-4xl sm:text-5xl text-purple-500">140<span class="text-purple-400">+</span></div>
+          <div class="font-bold text-sm mt-2" style="color: var(--text-main);" data-i18n="stat4Title">Partner Campuses</div>
+          <div class="text-xs mt-1" style="color: var(--text-muted);" data-i18n="stat4Desc">Worldwide destinations</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: DESTINATIONS DIRECTORY (With High-Resolution Pictures for Each Country) -->
+  <section id="destinations" class="py-20 relative border-t" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold border shadow-sm" style="background-color: var(--bg-primary); border-color: var(--border-accent); color: var(--brand-primary);" data-i18n="destPill">
+            Global Study Programs
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl mt-3" style="color: var(--text-main);" data-i18n="destHeading">
+            Explore Study Onboard & University Opportunities
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm max-w-md" style="color: var(--text-muted);" data-i18n="destSubheading">
+          Select your target country to explore language requirements, tuition ranges, and intake deadlines.
+        </p>
+      </div>
+
+      <!-- Country Cards Grid with Photos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Destination 1: France -->
+        <div class="glass-surface rounded-3xl overflow-hidden border hover:border-blue-500 transition-all group flex flex-col justify-between" style="border-color: var(--border-subtle);">
+          <div>
+            <div class="relative h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Study in France Paris" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold flex items-center gap-1.5">
+                <span>🇫🇷</span> <span>France</span>
+              </div>
+              <div class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-600 text-white">
+                CAMPUS FRANCE
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">France — Universities & Grandes Écoles</h3>
+              <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);">
+                Licence, Master, BTS and Cycle d'Ingénieur. Comprehensive management of your Études en France account, TCF prep, and housing proof.
+              </p>
+              <div class="mt-4 pt-4 border-t space-y-1.5 text-xs" style="border-color: var(--border-subtle);">
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Language Level:</span> <strong style="color: var(--text-main);">French (B2)</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Tuition Range:</span> <strong style="color: var(--brand-emerald);">€170 – €3,770 / yr</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Intakes:</span> <strong style="color: var(--text-main);">Sept & Jan</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openBookingModal('France')" class="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm">
+              Apply for France ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- Destination 2: Germany -->
+        <div class="glass-surface rounded-3xl overflow-hidden border hover:border-emerald-500 transition-all group flex flex-col justify-between" style="border-color: var(--border-subtle);">
+          <div>
+            <div class="relative h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80" alt="Study in Germany Berlin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold flex items-center gap-1.5">
+                <span>🇩🇪</span> <span>Germany</span>
+              </div>
+              <div class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-600 text-white">
+                TUITION FREE
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Germany — TU9 & Studienkolleg</h3>
+              <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);">
+                World-leading engineering, IT, and medical faculties. Uni-Assist dossier preparation, Studienkolleg placement, and €11,208 blocked account setup.
+              </p>
+              <div class="mt-4 pt-4 border-t space-y-1.5 text-xs" style="border-color: var(--border-subtle);">
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Language Level:</span> <strong style="color: var(--text-main);">German B1/B2 or English</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Public Tuition:</span> <strong style="color: var(--brand-emerald);">€0 Free Tuition</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Part-time Work:</span> <strong style="color: var(--text-main);">20 hrs/week allowed</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openBookingModal('Germany')" class="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-700 transition-colors shadow-sm">
+              Apply for Germany ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- Destination 3: Canada -->
+        <div class="glass-surface rounded-3xl overflow-hidden border hover:border-red-500 transition-all group flex flex-col justify-between" style="border-color: var(--border-subtle);">
+          <div>
+            <div class="relative h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517935703635-2717090c2210?auto=format&fit=crop&w=800&q=80" alt="Study in Canada Toronto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold flex items-center gap-1.5">
+                <span>🇨🇦</span> <span>Canada</span>
+              </div>
+              <div class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-600 text-white">
+                SDS STREAM
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Canada — Colleges & Universities</h3>
+              <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);">
+                Bachelors, Post-graduate certificates, and Master programs in Montreal, Quebec, and Toronto. 3-year PGWP work permit upon graduation.
+              </p>
+              <div class="mt-4 pt-4 border-t space-y-1.5 text-xs" style="border-color: var(--border-subtle);">
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Language:</span> <strong style="color: var(--text-main);">French or English (IELTS)</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Post-Grad Work:</span> <strong style="color: var(--brand-emerald);">Up to 3 Years (PGWP)</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Intakes:</span> <strong style="color: var(--text-main);">Fall, Winter, Summer</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openBookingModal('Canada')" class="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-red-600 hover:bg-red-700 transition-colors shadow-sm">
+              Apply for Canada ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- Destination 4: Spain -->
+        <div class="glass-surface rounded-3xl overflow-hidden border hover:border-amber-500 transition-all group flex flex-col justify-between" style="border-color: var(--border-subtle);">
+          <div>
+            <div class="relative h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=80" alt="Study in Spain Madrid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold flex items-center gap-1.5">
+                <span>🇪🇸</span> <span>Spain</span>
+              </div>
+              <div class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-600 text-white">
+                SELECTIVIDAD
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Spain — Grado & Máster Oficial</h3>
+              <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);">
+                High European quality close to Morocco. UNEDasiss homologation, Selectividad exam preparation, and faculties across Madrid, Barcelona, and Valencia.
+              </p>
+              <div class="mt-4 pt-4 border-t space-y-1.5 text-xs" style="border-color: var(--border-subtle);">
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Language:</span> <strong style="color: var(--text-main);">Spanish (B2) or English</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Tuition Range:</span> <strong style="color: var(--brand-emerald);">€800 – €2,500 / yr</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Cost of Living:</span> <strong style="color: var(--text-main);">Very affordable</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openBookingModal('Spain')" class="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-amber-600 hover:bg-amber-700 transition-colors shadow-sm">
+              Apply for Spain ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- Destination 5: Romania (Medicine) -->
+        <div class="glass-surface rounded-3xl overflow-hidden border hover:border-yellow-500 transition-all group flex flex-col justify-between" style="border-color: var(--border-subtle);">
+          <div>
+            <div class="relative h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Medicine Faculty Romania" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold flex items-center gap-1.5">
+                <span>🇷🇴</span> <span>Romania</span>
+              </div>
+              <div class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-yellow-600 text-white">
+                EU MEDICAL DEGREE
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Romania — Medicine, Dentistry & Pharmacy</h3>
+              <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);">
+                Study Medicine in English or French. 100% accredited EU diplomas recognized by the Moroccan Ministry of Health with no entrance exam required.
+              </p>
+              <div class="mt-4 pt-4 border-t space-y-1.5 text-xs" style="border-color: var(--border-subtle);">
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Programs:</span> <strong style="color: var(--text-main);">Medicine, Dental, Pharmacy</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Languages:</span> <strong style="color: var(--text-main);">French or English</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Recognition:</span> <strong style="color: var(--brand-emerald);">Morocco & EU Equivalence</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openBookingModal('Romania')" class="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-yellow-600 hover:bg-yellow-700 transition-colors shadow-sm">
+              Apply for Medicine ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- Destination 6: UK & Boarding Schools -->
+        <div class="glass-surface rounded-3xl overflow-hidden border hover:border-purple-500 transition-all group flex flex-col justify-between" style="border-color: var(--border-subtle);">
+          <div>
+            <div class="relative h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="British Boarding School" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold flex items-center gap-1.5">
+                <span>🇬🇧</span> <span>United Kingdom</span>
+              </div>
+              <div class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-600 text-white">
+                BOARDING ACADEMY
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">UK & International Boarding Schools</h3>
+              <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);">
+                High school boarding, A-Levels, Foundation programs, and Russell Group placements with pastoral care, campus guardianship, and dining.
+              </p>
+              <div class="mt-4 pt-4 border-t space-y-1.5 text-xs" style="border-color: var(--border-subtle);">
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Boarding Type:</span> <strong style="color: var(--text-main);">Full Boarding (On-Campus)</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Levels:</span> <strong style="color: var(--text-main);">High School, A-Levels, BSc</strong></div>
+                <div class="flex justify-between" style="color: var(--text-muted);"><span>Guardianship:</span> <strong style="color: var(--brand-emerald);">24/7 Full Student Care</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openBookingModal('UK')" class="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-purple-600 hover:bg-purple-700 transition-colors shadow-sm">
+              Explore Boarding ➔
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: THE PROVEN 4-STEP METHOD (With Timelines & Milestones) -->
+  <section id="roadmap" class="py-20 border-t" style="border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold border shadow-sm" style="background-color: var(--bg-surface); border-color: var(--border-accent); color: var(--brand-primary);" data-i18n="stepPill">
+          Clarity & Momentum
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl mt-3" style="color: var(--text-main);" data-i18n="stepHeading">
+          Your 4-Step Roadmap to Overseas Excellence
+        </h2>
+        <p class="text-xs sm:text-sm mt-2" style="color: var(--text-muted);" data-i18n="stepSubheading">
+          A transparent, structured timeline from your initial meeting in Kénitra to your flight departure.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="glass-surface p-6 rounded-3xl border relative" style="border-color: var(--border-subtle);">
+          <div class="text-3xl font-code font-black" style="color: var(--brand-primary); opacity: 0.5;">01</div>
+          <h3 class="font-display font-bold text-lg mt-2" style="color: var(--text-main);" data-i18n="step1Title">Free Profile Audit</h3>
+          <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);" data-i18n="step1Desc">
+            We evaluate your Moroccan diplomas, grades, language levels, and budget to build your individualized university shortlist.
+          </p>
+          <div class="mt-4 pt-3 border-t text-[11px] font-bold" style="border-color: var(--border-subtle); color: var(--brand-primary);">
+            📍 In Kénitra Office or Online
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-surface p-6 rounded-3xl border relative" style="border-color: var(--border-subtle);">
+          <div class="text-3xl font-code font-black" style="color: var(--brand-emerald); opacity: 0.5;">02</div>
+          <h3 class="font-display font-bold text-lg mt-2" style="color: var(--text-main);" data-i18n="step2Title">Dossier Preparation</h3>
+          <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);" data-i18n="step2Desc">
+            Drafting custom motivation letters, CV translation, certified document homologation, and portal submissions.
+          </p>
+          <div class="mt-4 pt-3 border-t text-[11px] font-bold" style="border-color: var(--border-subtle); color: var(--brand-emerald);">
+            ✓ 100% Guaranteed Submission
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-surface p-6 rounded-3xl border relative" style="border-color: var(--border-subtle);">
+          <div class="text-3xl font-code font-black" style="color: var(--brand-amber); opacity: 0.5;">03</div>
+          <h3 class="font-display font-bold text-lg mt-2" style="color: var(--text-main);" data-i18n="step3Title">Visa & Financials</h3>
+          <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);" data-i18n="step3Desc">
+            Blocked bank account setup, housing certificate (Attestation d'hébergement), and mock consulate interview simulations.
+          </p>
+          <div class="mt-4 pt-3 border-t text-[11px] font-bold" style="border-color: var(--border-subtle); color: var(--brand-amber);">
+            🛡️ 98.7% Visa Success Rate
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-surface p-6 rounded-3xl border relative" style="border-color: var(--border-subtle);">
+          <div class="text-3xl font-code font-black text-purple-500 opacity-50">04</div>
+          <h3 class="font-display font-bold text-lg mt-2" style="color: var(--text-main);" data-i18n="step4Title">Arrival & Boarding</h3>
+          <p class="text-xs mt-2 leading-relaxed" style="color: var(--text-muted);" data-i18n="step4Desc">
+            Airport reception, boarding residence check-in, European student bank account opening, and residency permit validation.
+          </p>
+          <div class="mt-4 pt-3 border-t text-[11px] font-bold text-purple-500" style="border-color: var(--border-subtle);">
+            ✈️ Full Pre-Departure Care
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: FREQUENTLY ASKED QUESTIONS (FAQ) -->
+  <section id="faq" class="py-20 border-t" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold border shadow-sm" style="background-color: var(--bg-primary); border-color: var(--border-accent); color: var(--brand-primary);" data-i18n="faqPill">
+          Got Questions?
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl mt-3" style="color: var(--text-main);" data-i18n="faqHeading">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xs sm:text-sm mt-2" style="color: var(--text-muted);" data-i18n="faqSubheading">
+          Everything Moroccan students and parents need to know about international study procedures.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="glass-surface rounded-2xl border p-5 group transition-all" style="border-color: var(--border-subtle);">
+          <summary class="font-display font-bold text-sm cursor-pointer list-none flex items-center justify-between" style="color: var(--text-main);">
+            <span data-i18n="q1Title">When should I start my Campus France / European application?</span>
+            <span class="text-blue-500 font-bold group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs mt-3 leading-relaxed pt-2 border-t" style="color: var(--text-muted); border-color: var(--border-subtle);" data-i18n="q1Answer">
+            The ideal time to start is between September and November of the academic year preceding your departure. For example, for a Fall 2026 intake, your file preparation, language certifications (TCF/DELF/IELTS), and dossier submission should begin as early as October 2025.
+          </p>
+        </details>
+
+        <details class="glass-surface rounded-2xl border p-5 group transition-all" style="border-color: var(--border-subtle);">
+          <summary class="font-display font-bold text-sm cursor-pointer list-none flex items-center justify-between" style="color: var(--text-main);">
+            <span data-i18n="q2Title">What are the financial guarantee requirements for a student visa?</span>
+            <span class="text-blue-500 font-bold group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs mt-3 leading-relaxed pt-2 border-t" style="color: var(--text-muted); border-color: var(--border-subtle);" data-i18n="q2Answer">
+            For France, the consulate requires an Attestation de Virement Irrévocable (AVI) of at least €615/month (€7,380/year) or an approved guarantor. For Germany, a blocked bank account (Sperrkonto) containing €11,208 is required. Our Kénitra team manages this entire process with certified banking partners.
+          </p>
+        </details>
+
+        <details class="glass-surface rounded-2xl border p-5 group transition-all" style="border-color: var(--border-subtle);">
+          <summary class="font-display font-bold text-sm cursor-pointer list-none flex items-center justify-between" style="color: var(--text-main);">
+            <span data-i18n="q3Title">Can I study in English in France, Germany, or Spain?</span>
+            <span class="text-blue-500 font-bold group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs mt-3 leading-relaxed pt-2 border-t" style="color: var(--text-muted); border-color: var(--border-subtle);" data-i18n="q3Answer">
+            Yes! Hundreds of Bachelor and Master programs in Germany, France, and Spain are taught 100% in English (especially in Business, Engineering, Computer Science, and Data Analytics). You will need an IELTS score (usually 6.0 - 6.5) or a recognized equivalent.
+          </p>
+        </details>
+
+        <details class="glass-surface rounded-2xl border p-5 group transition-all" style="border-color: var(--border-subtle);">
+          <summary class="font-display font-bold text-sm cursor-pointer list-none flex items-center justify-between" style="color: var(--text-main);">
+            <span data-i18n="q4Title">How does Afak Study Consulting guarantee student housing?</span>
+            <span class="text-blue-500 font-bold group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs mt-3 leading-relaxed pt-2 border-t" style="color: var(--text-muted); border-color: var(--border-subtle);" data-i18n="q4Answer">
+            We hold certified institutional partnerships with CROUS residences, private student residence networks, and vetted host families across France, Spain, and Germany. We provide you with the official Attestation d'hébergement required by consulates for your visa.
+          </p>
+        </details>
+
+        <details class="glass-surface rounded-2xl border p-5 group transition-all" style="border-color: var(--border-subtle);">
+          <summary class="font-display font-bold text-sm cursor-pointer list-none flex items-center justify-between" style="color: var(--text-main);">
+            <span data-i18n="q5Title">Where is the Afak office in Kénitra and do I need an appointment?</span>
+            <span class="text-blue-500 font-bold group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs mt-3 leading-relaxed pt-2 border-t" style="color: var(--text-muted); border-color: var(--border-subtle);" data-i18n="q5Answer">
+            Our office is located in downtown Kénitra near Place Administrative and Avenue Mohammed V (Coordinates: 34.2581741, -6.5817827). We welcome walk-in visits Monday through Friday from 09:00 to 18:30, though we strongly recommend booking a free session online or via WhatsApp to guarantee one-on-one time with an academic advisor.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: SOCIAL MEDIA COMMUNITY (Instagram & Facebook Focus) -->
+  <section class="py-12 border-t" style="border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-surface p-6 sm:p-8 rounded-3xl border flex flex-col md:flex-row items-center justify-between gap-6" style="border-color: var(--border-accent);">
+        
+        <div class="space-y-1 text-center md:text-left">
+          <div class="text-xs font-bold uppercase tracking-wider" style="color: var(--brand-primary);" data-i18n="socialEyebrow">Join Our Student Community</div>
+          <h3 class="font-display font-black text-2xl text-slate-900 dark:text-white" data-i18n="socialTitle">Follow Afak Study on Instagram & Facebook</h3>
+          <p class="text-xs sm:text-sm" style="color: var(--text-muted);" data-i18n="socialDesc">Get daily updates on scholarship deadlines, university intake calls, and visa interviews.</p>
+        </div>
+
+        <div class="flex items-center gap-3 shrink-0">
+          <!-- Instagram Button -->
+          <a href="https://www.instagram.com/afak_consulting/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold text-white flex items-center gap-2 shadow-lg hover:scale-105 transition-all" style="background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram @afak_consulting</span>
+          </a>
+
+          <!-- Facebook Button -->
+          <a href="https://www.facebook.com/search/top?q=Afak%20Study%20Consulting" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold text-white bg-[#1877F2] hover:bg-[#166fe5] flex items-center gap-2 shadow-lg hover:scale-105 transition-all">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.833C10.5 0 9 1.5 9 4.333V8z"/></svg>
+            <span>Facebook Page</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: GOOGLE MAPS & KÉNITRA HEADQUARTERS -->
+  <section id="location" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-surface rounded-3xl p-6 sm:p-8 border shadow-xl" style="border-color: var(--border-accent);">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider" style="color: var(--brand-primary);" data-i18n="mapEyebrow">Physical Headquarters</div>
+            <h2 class="font-display font-black text-2xl sm:text-3xl text-slate-900 dark:text-white mt-1" data-i18n="mapTitle">Afak Study Consulting — Kénitra</h2>
+            <p class="text-xs sm:text-sm mt-0.5" style="color: var(--text-muted);" data-i18n="mapDesc">Visit us in downtown Kénitra for face-to-face academic guidance and dossier submission.</p>
+          </div>
+
+          <a href="https://maps.app.goo.gl/gM8Zp8RqbKvvhZAJ9" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full font-bold text-xs text-white flex items-center gap-2 shadow-md hover:scale-105 transition-all shrink-0" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));">
+            <span data-i18n="btnGoogleMaps">Open in Google Maps</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          
+          <!-- Map Iframe -->
+          <div class="lg:col-span-8 rounded-2xl overflow-hidden border shadow-lg min-h-[340px] relative bg-slate-950" style="border-color: var(--border-subtle);">
+            <iframe 
+              src="https://maps.google.com/maps?q=34.2581741,-6.5817827&hl=en&z=17&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0; min-height: 340px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Afak Study Consulting Kénitra Location">
+            </iframe>
+          </div>
+
+          <!-- Contact Details -->
+          <div class="lg:col-span-4 flex flex-col justify-between space-y-4 p-5 rounded-2xl border" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+            
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-sm font-bold" style="background-color: var(--brand-glow); color: var(--brand-primary);">📍</div>
+                <div>
+                  <div class="text-xs font-semibold" style="color: var(--text-muted);" data-i18n="mapAddressLabel">Address:</div>
+                  <div class="text-xs font-bold leading-snug" style="color: var(--text-main);" data-i18n="mapAddressText">Centre-Ville, Kénitra, Morocco</div>
+                  <div class="text-[10px] font-code" style="color: var(--text-subtle);">Coordinates: 34.2581741, -6.5817827</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-sm font-bold" style="background-color: rgba(16, 185, 129, 0.1); color: var(--brand-emerald);">🕒</div>
+                <div>
+                  <div class="text-xs font-semibold" style="color: var(--text-muted);" data-i18n="mapHoursLabel">Hours:</div>
+                  <div class="text-xs font-bold" style="color: var(--text-main);" data-i18n="mapHoursText">Mon – Fri: 09:00 – 18:30</div>
+                  <div class="text-xs" style="color: var(--text-muted);" data-i18n="mapHoursSat">Saturday: 09:30 – 14:00</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-sm font-bold" style="background-color: rgba(245, 158, 11, 0.1); color: var(--brand-amber);">📱</div>
+                <div>
+                  <div class="text-xs font-semibold" style="color: var(--text-muted);" data-i18n="mapContactLabel">Contact:</div>
+                  <div class="text-xs font-code font-bold" style="color: var(--text-main);">contact@afakstudy.ma</div>
+                  <div class="text-xs" style="color: var(--brand-primary);">@afak_consulting (Instagram)</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t space-y-2" style="border-color: var(--border-subtle);">
+              <a href="https://wa.me/212600000000" target="_blank" rel="noopener" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center gap-2 shadow-sm transition-all">
+                <span>💬 WhatsApp Academic Advisor</span>
+              </a>
+              <button onclick="openBookingModal()" class="w-full py-2 px-4 rounded-xl text-xs font-bold border transition-colors" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" data-i18n="btnBookOffice">
+                Schedule Office Appointment
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t py-12 transition-colors" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b" style="border-color: var(--border-subtle);">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center font-display font-black text-white text-xl shadow-md" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));">
+            A
+          </div>
+          <div>
+            <div class="font-display font-extrabold text-base tracking-tight" style="color: var(--text-main);">
+              <span>AFAK</span>
+              <span class="text-xs font-code px-1.5 py-0.5 rounded font-bold" style="background-color: var(--brand-glow); color: var(--brand-primary);">STUDY</span>
+            </div>
+            <div class="text-[9px] uppercase tracking-wider" style="color: var(--text-subtle);">International Admissions • Kénitra</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs font-medium" style="color: var(--text-muted);">
+          <a href="https://www.instagram.com/afak_consulting/" target="_blank" rel="noopener" class="hover:text-blue-500 transition-colors">Instagram</a>
+          <span>•</span>
+          <a href="https://www.facebook.com/search/top?q=Afak%20Study%20Consulting" target="_blank" rel="noopener" class="hover:text-blue-500 transition-colors">Facebook</a>
+          <span>•</span>
+          <a href="https://maps.app.goo.gl/gM8Zp8RqbKvvhZAJ9" target="_blank" rel="noopener" class="hover:text-blue-500 transition-colors">Google Maps</a>
+          <span>•</span>
+          <a href="mailto:contact@afakstudy.ma" class="hover:text-blue-500 transition-colors">Email</a>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style="color: var(--text-subtle);">
+        <div>
+          © 2026 Afak Study Consulting. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#hero" class="hover:text-blue-500 transition-colors">Back to top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <dialog id="booking-modal" class="p-6 sm:p-8 rounded-3xl border max-w-md w-full backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm shadow-2xl" style="background-color: var(--bg-surface); border-color: var(--border-accent); color: var(--text-main);">
+    <div class="flex justify-between items-center mb-4">
+      <div>
+        <div class="text-[10px] font-code uppercase tracking-wider" style="color: var(--brand-primary);">Afak Study Consulting • Kénitra</div>
+        <h3 class="font-display font-bold text-lg" data-i18n="modalTitle">Book Consultation</h3>
+      </div>
+      <button onclick="closeBookingModal()" class="text-slate-400 hover:text-slate-600 text-lg">✕</button>
+    </div>
+    <form onsubmit="handleFormSubmission(event)" class="space-y-3.5 text-xs">
+      <div>
+        <label class="block font-semibold mb-1" style="color: var(--text-main);" data-i18n="modalName">Full Name</label>
+        <input type="text" required placeholder="e.g. Youssef El Amrani" class="w-full border rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500" style="background-color: var(--bg-primary); border-color: var(--border-subtle); color: var(--text-main);">
+      </div>
+      <div>
+        <label class="block font-semibold mb-1" style="color: var(--text-main);" data-i18n="modalPhone">Phone / WhatsApp</label>
+        <input type="tel" required placeholder="+212 6 XX XX XX XX" class="w-full border rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500" style="background-color: var(--bg-primary); border-color: var(--border-subtle); color: var(--text-main);">
+      </div>
+      <div>
+        <label class="block font-semibold mb-1" style="color: var(--text-main);" data-i18n="modalDest">Target Destination</label>
+        <select class="w-full border rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500" style="background-color: var(--bg-primary); border-color: var(--border-subtle); color: var(--text-main);">
+          <option>France (Campus France)</option>
+          <option>Germany (Studienkolleg / Universities)</option>
+          <option>Spain (Grado / Selectividad)</option>
+          <option>Canada (Colleges / Universities)</option>
+          <option>Romania (Medicine / Dentistry)</option>
+          <option>United Kingdom & Boarding</option>
+        </select>
+      </div>
+      <button type="submit" class="w-full py-2.5 rounded-xl font-bold text-white text-xs shadow-md transition-all hover:scale-[1.02]" style="background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));" data-i18n="modalSubmit">
+        Confirm Free Consultation ➔
+      </button>
+      <div id="modal-feedback" class="hidden text-center font-bold pt-1" style="color: var(--brand-emerald);" data-i18n="modalSuccess">
+        ✓ Request sent! An advisor will contact you on WhatsApp.
+      </div>
+    </form>
+  </dialog>
+
+  <!-- JAVASCRIPT: 3-LANGUAGE I18N, DARK/LIGHT TOGGLE & 3D GLOBE -->
+  <script>
+    // 1. i18n Dictionary for 3 Languages
+    const i18nData = {
+      en: {
+        topLocation: "Kénitra Headquarters: 34.2581, -6.5817",
+        topAccreditation: "Certified International Education Advisory",
+        navHome: "Home",
+        navAbout: "About Us",
+        navDestinations: "Destinations",
+        navServices: "Services",
+        navSteps: "4-Steps",
+        navFaq: "FAQ",
+        navOffice: "Kénitra Office",
+        ctaApply: "Apply Now",
+        heroBadge: "Accredited Overseas Study & Boarding Placement",
+        heroTitle1: "Where Global Ambition",
+        heroTitle2: "Creates Excellence",
+        heroDesc: "Direct university admissions and international boarding across France, Germany, Spain, Canada, the UK, and Romania. End-to-end guidance from campus orientation to guaranteed visa approval in our Kénitra counseling center.",
+        btnExplore: "Explore Universities",
+        btnConsult: "Book Free Counseling",
+        proofRating: "Verified Alumni Reviews (Kénitra)",
+        proofStudents: "2,850+ Students Placed",
+        proofCountries: "In top faculties across 28 nations",
+        feat1Tag: "Free Audit",
+        feat1Title: "Academic Roadmap",
+        feat1Desc: "Personalized major matching based on your Moroccan BAC, BTS, License, or Master degree.",
+        feat2Tag: "Top 100",
+        feat2Title: "University Placement",
+        feat2Desc: "Direct agreements with accredited public and private European institutions and boarding colleges.",
+        feat3Tag: "Visa Prep",
+        feat3Title: "Visa & Campus France",
+        feat3Desc: "Rigorous interview preparation, financial proof optimization, and blocked account setup.",
+        feat4Tag: "Housing",
+        feat4Title: "Boarding & Housing",
+        feat4Desc: "Guaranteed housing certificate (Attestation de logement) and airport pick-up upon arrival.",
+        aboutPill: "About Afak Study Consulting",
+        aboutTitle1: "Your Trusted Bridge Between Morocco",
+        aboutTitle2: "And The World's Top Campuses",
+        aboutDesc: "Studying abroad is one of the most important investments in your life. Headquartered in Kénitra, Afak Study Consulting was founded with one clear mission: to provide Moroccan students and families with honest, transparent, and certified guidance through every stage of international higher education.",
+        aboutBadgeTitle: "Empowering Moroccan Youth",
+        aboutBadgeSub: "Over 2,850 successful admissions since 2014",
+        pillar1Title: "Zero-Bureaucracy Tracking",
+        pillar1Desc: "We manage Campus France, UNEDasiss, and Uni-Assist platforms so you never miss a deadline.",
+        pillar2Title: "Proven Visa Track Record",
+        pillar2Desc: "Mock consulate interviews and verified financial guarantees resulting in 98.7% visa acceptance.",
+        pillar3Title: "Boarding & Housing Security",
+        pillar3Desc: "Official housing contracts and student residences ready before you attend your visa appointment.",
+        pillar4Title: "Alumni Network in 28 Countries",
+        pillar4Desc: "Connect with former Moroccan students already settled in Paris, Munich, Montreal, and Madrid.",
+        stat1Title: "Years Experience",
+        stat1Desc: "Guiding Moroccan students",
+        stat2Title: "Students Admitted",
+        stat2Desc: "Undergrad & Postgrad",
+        stat3Title: "Visa Success",
+        stat3Desc: "Proven compliance record",
+        stat4Title: "Partner Campuses",
+        stat4Desc: "Worldwide destinations",
+        destPill: "Global Study Programs",
+        destHeading: "Explore Study Onboard & University Opportunities",
+        destSubheading: "Select your target country to explore language requirements, tuition ranges, and intake deadlines.",
+        stepPill: "Clarity & Momentum",
+        stepHeading: "Your 4-Step Roadmap to Overseas Excellence",
+        stepSubheading: "A transparent, structured timeline from your initial meeting in Kénitra to your flight departure.",
+        step1Title: "Free Profile Audit",
+        step1Desc: "We evaluate your Moroccan diplomas, grades, language levels, and budget to build your individualized university shortlist.",
+        step2Title: "Dossier Preparation",
+        step2Desc: "Drafting custom motivation letters, CV translation, certified document homologation, and portal submissions.",
+        step3Title: "Visa & Financials",
+        step3Desc: "Blocked bank account setup, housing certificate (Attestation d'hébergement), and mock consulate interview simulations.",
+        step4Title: "Arrival & Boarding",
+        step4Desc: "Airport reception, boarding residence check-in, European student bank account opening, and residency permit validation.",
+        faqPill: "Got Questions?",
+        faqHeading: "Frequently Asked Questions",
+        faqSubheading: "Everything Moroccan students and parents need to know about international study procedures.",
+        q1Title: "When should I start my Campus France / European application?",
+        q1Answer: "The ideal time to start is between September and November of the academic year preceding your departure. For example, for a Fall 2026 intake, your file preparation, language certifications (TCF/DELF/IELTS), and dossier submission should begin as early as October 2025.",
+        q2Title: "What are the financial guarantee requirements for a student visa?",
+        q2Answer: "For France, the consulate requires an Attestation de Virement Irrévocable (AVI) of at least €615/month (€7,380/year) or an approved guarantor. For Germany, a blocked bank account (Sperrkonto) containing €11,208 is required. Our Kénitra team manages this entire process with certified banking partners.",
+        q3Title: "Can I study in English in France, Germany, or Spain?",
+        q3Answer: "Yes! Hundreds of Bachelor and Master programs in Germany, France, and Spain are taught 100% in English (especially in Business, Engineering, Computer Science, and Data Analytics). You will need an IELTS score (usually 6.0 - 6.5) or a recognized equivalent.",
+        q4Title: "How does Afak Study Consulting guarantee student housing?",
+        q4Answer: "We hold certified institutional partnerships with CROUS residences, private student residence networks, and vetted host families across France, Spain, and Germany. We provide you with the official Attestation d'hébergement required by consulates for your visa.",
+        q5Title: "Where is the Afak office in Kénitra and do I need an appointment?",
+        q5Answer: "Our office is located in downtown Kénitra near Place Administrative and Avenue Mohammed V (Coordinates: 34.2581741, -6.5817827). We welcome walk-in visits Monday through Friday from 09:00 to 18:30, though we strongly recommend booking a free session online or via WhatsApp to guarantee one-on-one time with an academic advisor.",
+        socialEyebrow: "Join Our Student Community",
+        socialTitle: "Follow Afak Study on Instagram & Facebook",
+        socialDesc: "Get daily updates on scholarship deadlines, university intake calls, and visa interviews.",
+        mapEyebrow: "Physical Headquarters",
+        mapTitle: "Afak Study Consulting — Kénitra",
+        mapDesc: "Visit us in downtown Kénitra for face-to-face academic guidance and dossier submission.",
+        btnGoogleMaps: "Open in Google Maps",
+        mapAddressLabel: "Address:",
+        mapAddressText: "Centre-Ville, Kénitra, Morocco",
+        mapHoursLabel: "Hours:",
+        mapHoursText: "Mon – Fri: 09:00 – 18:30",
+        mapHoursSat: "Saturday: 09:30 – 14:00",
+        mapContactLabel: "Contact:",
+        btnBookOffice: "Schedule Office Appointment",
+        modalTitle: "Book Free Consultation",
+        modalName: "Full Name",
+        modalPhone: "Phone / WhatsApp",
+        modalDest: "Target Destination",
+        modalSubmit: "Confirm Free Consultation ➔",
+        modalSuccess: "✓ Request sent! An advisor will contact you on WhatsApp."
+      },
+      fr: {
+        topLocation: "Siège Kénitra : 34.2581, -6.5817",
+        topAccreditation: "Cabinet d'orientation internationale certifié",
+        navHome: "Accueil",
+        navAbout: "L'Agence",
+        navDestinations: "Destinations",
+        navServices: "Services",
+        navSteps: "4 Étapes",
+        navFaq: "FAQ",
+        navOffice: "Bureau Kénitra",
+        ctaApply: "Postuler",
+        heroBadge: "Études & Internats Internationaux Accrédités",
+        heroTitle1: "Quand Vos Ambitions",
+        heroTitle2: "Deviennent Réalité",
+        heroDesc: "Admissions directes en universités et internats en France, Allemagne, Espagne, Canada, Royaume-Uni et Roumanie. De l'orientation jusqu'à l'obtention du visa au bureau de Kénitra.",
+        btnExplore: "Explorer les Universités",
+        btnConsult: "Prendre Rendez-vous",
+        proofRating: "Avis vérifiés d'étudiants (Kénitra)",
+        proofStudents: "2 850+ Étudiants Placés",
+        proofCountries: "Dans les meilleures universités (28 pays)",
+        feat1Tag: "Audit Gratuit",
+        feat1Title: "Bilan d'Orientation",
+        feat1Desc: "Sélection personnalisée selon votre profil BAC, BTS, Licence ou Master marocain.",
+        feat2Tag: "Top 100",
+        feat2Title: "Admissions Universités",
+        feat2Desc: "Partenariats directs avec des universités publiques et Grandes Écoles accréditées.",
+        feat3Tag: "Visa Garanti",
+        feat3Title: "Visa & Campus France",
+        feat3Desc: "Préparation intensive de l'entretien consulaire, compte bloqué et justificatifs financiers.",
+        feat4Tag: "Logement",
+        feat4Title: "Internats & Logements",
+        feat4Desc: "Attestation de logement certifiée pour le visa et accueil à l'aéroport à l'arrivée.",
+        aboutPill: "À Propos d'Afak Study",
+        aboutTitle1: "Votre Pont de Confiance Entre le Maroc",
+        aboutTitle2: "Et les Meilleurs Campus Mondiaux",
+        aboutDesc: "Partir étudier à l'étranger est un investissement décisif. Basé à Kénitra, le cabinet Afak Study Consulting a pour mission de guider les étudiants et familles marocaines avec transparence et rigueur.",
+        aboutBadgeTitle: "Accompagner la Jeunesse Marocaine",
+        aboutBadgeSub: "Plus de 2 850 admissions réussies depuis 2014",
+        pillar1Title: "Zéro Tracas Administratif",
+        pillar1Desc: "Gestion intégrale de vos comptes Campus France, UNEDasiss et Uni-Assist.",
+        pillar2Title: "Réussite Visa Démontrée",
+        pillar2Desc: "Simulations d'entretiens et attestations conformes : 98,7% de visas accordés.",
+        pillar3Title: "Garantie de Logement & Internat",
+        pillar3Desc: "Attestations de logement officielles délivrées avant votre rendez-vous consulaire.",
+        pillar4Title: "Réseau d'Anciens dans 28 Pays",
+        pillar4Desc: "Entrez en contact avec des lauréats déjà installés à Paris, Munich et Montréal.",
+        stat1Title: "Années d'Expérience",
+        stat1Desc: "Au service des étudiants",
+        stat2Title: "Étudiants Admis",
+        stat2Desc: "Licence, Master & Médecine",
+        stat3Title: "Taux Visa",
+        stat3Desc: "Dossiers 100% conformes",
+        stat4Title: "Campus Partenaires",
+        stat4Desc: "Dans le monde entier",
+        destPill: "Formations Internationales",
+        destHeading: "Découvrez Nos Universités & Internats",
+        destSubheading: "Consultez les conditions d'accès, frais de scolarité et dates limites d'inscription par pays.",
+        stepPill: "Méthode Éprouvée",
+        stepHeading: "Vos 4 Étapes Vers la Réussite Internationale",
+        stepSubheading: "Un parcours clair et balisé depuis votre premier rendez-vous à Kénitra jusqu'à l'aéroport.",
+        step1Title: "Bilan Gratuit de Profil",
+        step1Desc: "Évaluation complète de votre dossier académique pour sélectionner les 5 meilleures universités.",
+        step2Title: "Préparation du Dossier",
+        step2Desc: "Lettres de motivation sur mesure, traduction certifiée et soumission sur les plateformes officielles.",
+        step3Title: "Procédure Visa & Finances",
+        step3Desc: "Création du compte bloqué (AVI), attestation de logement et simulations d'entretiens consulaires.",
+        step4Title: "Départ & Installation",
+        step4Desc: "Accueil à l'aéroport, remise des clés du logement, ouverture du compte bancaire et titre de séjour.",
+        faqPill: "Questions Fréquentes",
+        faqHeading: "Foire Aux Questions",
+        faqSubheading: "Toutes les réponses essentielles pour préparer sereinement vos études à l'étranger.",
+        q1Title: "Quand faut-il débuter sa procédure Campus France ou internationale ?",
+        q1Answer: "Le calendrier optimal débute entre septembre et novembre précédant la rentrée. Pour la rentrée 2026, la préparation des tests de langue (TCF/DELF/IELTS) commence dès l'automne 2025.",
+        q2Title: "Quels sont les justificatifs financiers exigés pour le visa étudiant ?",
+        q2Answer: "Pour la France, une attestation de virement irrévocable (AVI) d'au moins 615 €/mois (7 380 €/an) est requise. Pour l'Allemagne, un compte bloqué de 11 208 € est obligatoire. Nous vous accompagnons auprès des banques partenaires.",
+        q3Title: "Peut-on étudier en anglais en France, Allemagne ou Espagne ?",
+        q3Answer: "Oui, de nombreuses filières (ingénierie, informatique, business) sont dispensées à 100% en anglais. Un score IELTS (6.0 - 6.5) est généralement requis.",
+        q4Title: "Comment Afak garantit-elle mon logement étudiant ?",
+        q4Answer: "Grâce à des partenariats directs avec des résidences universitaires privées et des résidences étudiantes agréées, nous émettons l'attestation de logement indispensable pour le visa.",
+        q5Title: "Où se situe le cabinet Afak à Kénitra et faut-il prendre rendez-vous ?",
+        q5Answer: "Nous sommes situés au centre-ville de Kénitra, près de la Place Administrative (Coordonnées : 34.2581741, -6.5817827). Nous vous recevons du lundi au vendredi de 09h00 à 18h30.",
+        socialEyebrow: "Communauté Étudiante",
+        socialTitle: "Suivez Afak Study sur Instagram & Facebook",
+        socialDesc: "Bourses d'études, dates clés de candidatures et témoignages en direct.",
+        mapEyebrow: "Siège Social",
+        mapTitle: "Afak Study Consulting — Kénitra",
+        mapDesc: "Rencontrez nos conseillers à Kénitra pour étudier votre projet et valider vos dossiers.",
+        btnGoogleMaps: "Ouvrir dans Google Maps",
+        mapAddressLabel: "Adresse :",
+        mapAddressText: "Centre-Ville, Kénitra, Maroc",
+        mapHoursLabel: "Horaires :",
+        mapHoursText: "Lun – Ven : 09h00 – 18h30",
+        mapHoursSat: "Samedi : 09h30 – 14h00",
+        mapContactLabel: "Contact :",
+        btnBookOffice: "Rendez-vous au Cabinet",
+        modalTitle: "Consultation Gratuite",
+        modalName: "Nom et Prénom",
+        modalPhone: "Téléphone / WhatsApp",
+        modalDest: "Destination souhaitée",
+        modalSubmit: "Confirmer mon rendez-vous ➔",
+        modalSuccess: "✓ Demande envoyée ! Un conseiller vous contactera sur WhatsApp."
+      },
+      ar: {
+        topLocation: "المقر الرئيسي بالقنيطرة: 34.2581, -6.5817",
+        topAccreditation: "وكالة معتمدة للاستشارات والتسجيل الدولي",
+        navHome: "الرئيسية",
+        navAbout: "عن الوكالة",
+        navDestinations: "الوجهات الدراسية",
+        navServices: "الخدمات",
+        navSteps: "4 مراحل",
+        navFaq: "الأسئلة الشائعة",
+        navOffice: "مكتب القنيطرة",
+        ctaApply: "قدّم الآن",
+        heroBadge: "دراسة معتمدة بالخارج والمدارس الداخلية",
+        heroTitle1: "حيث تلتقي طموحاتكم",
+        heroTitle2: "بالتميز العالمي",
+        heroDesc: "تسجيل مضمون بأرقى الجامعات والمدارس بالخارج في فرنسا، ألمانيا، إسبانيا، كندا، بريطانيا، ورومانيا. مواكبة كاملة من التوجيه حتى استلام التأشيرة من مقرنا بالقنيطرة.",
+        btnExplore: "استكشف الجامعات",
+        btnConsult: "احجز استشارة مجانية",
+        proofRating: "تقييمات موثوقة لطلاب القنيطرة",
+        proofStudents: "+2,850 طالب وطالبة",
+        proofCountries: "في كبرى كليات 28 دولة",
+        feat1Tag: "تدقيق مجاني",
+        feat1Title: "تخطيط المسار الأكاديمي",
+        feat1Desc: "توجيه دقيق حسب تخصصكم بالباكالوريا، BTS، الإجازة أو الماستر.",
+        feat2Tag: "أفضل 100",
+        feat2Title: "التسجيل بالجامعات",
+        feat2Desc: "شراكات مباشرة مع الجامعات العمومية والمدارس العليا المعترف بها دولياً.",
+        feat3Tag: "ملف الفيزا",
+        feat3Title: "التأشيرة وكامبوس فرانس",
+        feat3Desc: "إعداد متكامل لمقابلة القنصلية، فتح الحساب البنكي المغلق، والشهادات المالية.",
+        feat4Tag: "السكن الطلابي",
+        feat4Title: "الإقامة والسكن",
+        feat4Desc: "شهادة سكن رسمية معتمدة للفيزا مع خدمة الاستقبال بالمطار فور الوصول.",
+        aboutPill: "عن وكالة آفاق ستادي",
+        aboutTitle1: "جسركم الموثوق بين المغرب",
+        aboutTitle2: "وأعرق الجامعات العالمية",
+        aboutDesc: "الدراسة بالخارج خطوة مصيرية في مساركم. تأسست آفاق ستادي بالقنيطرة لهدف واضح: تقديم استشارات وتوجيه أكاديمي موثوق وشفاف لمواكبة الطالب في كل المراحل.",
+        aboutBadgeTitle: "دعم الطاقات الطلابية المغربية",
+        aboutBadgeSub: "أكثر من 2,850 تسجيلاً جامعياً ناجحاً منذ 2014",
+        pillar1Title: "إجراءات إدارية سهلة",
+        pillar1Desc: "نتولى إدارة ملفات كامبوس فرانس، UNEDasiss و Uni-Assist باحترافية تامة.",
+        pillar2Title: "نسبة نجاح قياسية للفيزا",
+        pillar2Desc: "تدريب عملي على مقابلة القنصلية وحسابات بنكية معتمدة بنسبة نجاح 98.7%.",
+        pillar3Title: "ضمان السكن والإقامة",
+        pillar3Desc: "نوفر شهادات السكن المعتمدة وحجز الغرف الطلابية قبل موعد القنصلية.",
+        pillar4Title: "شبكة خريجين عبر 28 دولة",
+        pillar4Desc: "تواصل مع خريجين مغاربة يدرسون حالياً بباريس، ميونخ، مدريد، ومونتريال.",
+        stat1Title: "سنوات من الخبرة",
+        stat1Desc: "في خدمة الطلاب المغاربة",
+        stat2Title: "طالب مسجل",
+        stat2Desc: "إجازة، ماستر وطب",
+        stat3Title: "نسبة قبول الفيزا",
+        stat3Desc: "ملفات مدروسة باحترافية",
+        stat4Title: "جامعة شريكة",
+        stat4Desc: "حول العالم",
+        destPill: "البرامج الدولية",
+        destHeading: "استكشف وجهات الدراسة بالخارج والمدارس الداخلية",
+        destSubheading: "اختر وجهتك المفضلة لمعرفة تكاليف الدراسة، اللغات المطلوبة، ومواعيد التسجيل.",
+        stepPill: "وضوح وفاعلية",
+        stepHeading: "خارطة طريقك في 4 مراحل نحو النجاح",
+        stepSubheading: "خطوات واضحة ومدروسة من زيارتك الأولى لمكتب القنيطرة حتى وصولك لوجهتك.",
+        step1Title: "تدقيق مجاني للملف الأكاديمي",
+        step1Desc: "دراسة دقيقة لمؤهلاتك ولغاتك لاختيار أفضل 5 جامعات متوافقة مع ميزانيتك.",
+        step2Title: "إعداد وتجهيز الملف",
+        step2Desc: "صياغة رسائل التحفيز، ترجمة الوثائق، وتعبئة الطلبات بالمنصات الجامعية.",
+        step3Title: "إجراءات التأشيرة والمالية",
+        step3Desc: "فتح الحساب المغلق، شهادة السكن، والمحاكاة التفاعلية لمقابلة الفيزا.",
+        step4Title: "الاستقبال والالتحاق بالدراسة",
+        step4Desc: "الاستقبال بالمطار، تسليم مفاتيح السكن، فتح الحساب البنكي الأوروبي، وبطاقة الإقامة.",
+        faqPill: "تساؤلات متكررة",
+        faqHeading: "الأسئلة الشائعة للطلاب وأولياء الأمور",
+        faqSubheading: "كل ما تحتاج معرفته حول إجراءات وشروط الدراسة بالخارج.",
+        q1Title: "متى يجب أن أبدأ إجراءات كامبوس فرانس أو التسجيل الدولي؟",
+        q1Answer: "الفترة المثالية هي بين شتنبر ونونبر من السنة السابقة لسنة السفر. لتحضير ملف خريف 2026، يجب البدء في اختبارات اللغة وإعداد الملفات ابتداءً من أكتوبر 2025.",
+        q2Title: "ما هي الشروط والضمانات المالية المطلوبة لفيزا الدراسة؟",
+        q2Answer: "بالنسبة لفرنسا، تطلب القنصلية تحويلاً بنكياً لا رجعة فيه (AVI) بمبلغ 615 يورو شهرياً (7,380 يورو سنوياً). وبالنسبة لألمانيا، حساب بنكي مغلق بمبلغ 11,208 يورو.",
+        q3Title: "هل يمكنني الدراسة باللغة الإنجليزية في فرنسا أو ألمانيا أو إسبانيا؟",
+        q3Answer: "نعم! تتوفر مئات التخصصات باللغة الإنجليزية بالكامل (الهندسة، علوم الحاسوب، وإدارة الأعمال). يتطلب ذلك عادة شهادة IELTS بمعدل 6.0 أو ما يعادلها.",
+        q4Title: "كيف تضمن وكالة آفاق توفير السكن الجامعي للطلبة؟",
+        q4Answer: "عبر شراكات مع إقامات السكن الجامعي المعتمدة، نوفر شهادة السكن الرسمية (Attestation de logement) المطلوبة إجبارياً في ملف التأشيرة.",
+        q5Title: "أين يوجد مقر آفاق بالقنيطرة وهل يلزم أخذ موعد مسبق؟",
+        q5Answer: "يقع مكتبنا بوسط مدينة القنيطرة قرب الساحة الإدارية وشارع محمد الخامس (الإحداثيات: 34.2581741, -6.5817827). نرحب بكم من الإثنين إلى الجمعة من 09:00 إلى 18:30.",
+        socialEyebrow: "انضموا لمجتمعنا الطلابي",
+        socialTitle: "تابعوا آفاق ستادي على إنستغرام وفيسبوك",
+        socialDesc: "آخر أخبار المنح الدراسية، مواعيد التسجيل، ونصائح مقابلات التأشيرة.",
+        mapEyebrow: "المقر الرئيسي",
+        mapTitle: "آفاق ستادي للاستشارات — القنيطرة",
+        mapDesc: "تفضلوا بزيارة مكتبنا بوسط مدينة القنيطرة للاستشارة وتدقيق ملفكم مباشرة.",
+        btnGoogleMaps: "فتح في خرائط جوجل",
+        mapAddressLabel: "العنوان:",
+        mapAddressText: "وسط المدينة، القنيطرة، المغرب",
+        mapHoursLabel: "أوقات العمل:",
+        mapHoursText: "الإثنين – الجمعة: 09:00 – 18:30",
+        mapHoursSat: "السبت: 09:30 – 14:00",
+        mapContactLabel: "للتواصل:",
+        btnBookOffice: "حجز موعد بالمكتب",
+        modalTitle: "حجز استشارة مجانية",
+        modalName: "الاسم الكامل",
+        modalPhone: "الهاتف / واتساب",
+        modalDest: "البلد المطلوب",
+        modalSubmit: "تأكيد طلب الاستشارة ➔",
+        modalSuccess: "✓ تم إرسال الطلب بنجاح! سيتواصل معكم مستشارنا عبر واتساب."
+      }
+    };
+
+    function setLanguage(lang) {
+      const htmlEl = document.documentElement;
+      
+      if (lang === 'ar') {
+        htmlEl.setAttribute('dir', 'rtl');
+        htmlEl.setAttribute('lang', 'ar');
+      } else {
+        htmlEl.setAttribute('dir', 'ltr');
+        htmlEl.setAttribute('lang', lang);
+      }
+
+      // Update Active Button Pill
+      ['en', 'fr', 'ar'].forEach(l => {
+        const btn = document.getElementById('lang-' + l);
+        if (btn) {
+          if (l === lang) {
+            btn.className = "px-2 py-1 rounded-full transition-all text-white bg-blue-600 shadow-sm text-[11px] font-bold";
+          } else {
+            btn.className = "px-2 py-1 rounded-full transition-all hover:text-blue-500 text-[11px] font-medium";
+            btn.style.color = "var(--text-muted)";
+          }
+        }
+      });
+
+      // Update Text via data-i18n
+      const dict = i18nData[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict && dict[key]) {
+          el.innerText = dict[key];
+        }
+      });
+    }
+
+    // 2. Dark / Light Mode Switcher
+    let isDark = false;
+    function toggleTheme() {
+      isDark = !isDark;
+      const html = document.documentElement;
+      const icon = document.getElementById('theme-icon');
+      
+      if (isDark) {
+        html.classList.add('dark');
+        icon.innerText = '☀️';
+      } else {
+        html.classList.remove('dark');
+        icon.innerText = '🌙';
+      }
+    }
+
+    // 3. Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // 4. Modal Functions
+    function openBookingModal(country = '') {
+      const modal = document.getElementById('booking-modal');
+      modal.showModal();
+    }
+    function closeBookingModal() {
+      document.getElementById('booking-modal').close();
+    }
+    function handleFormSubmission(e) {
+      e.preventDefault();
+      const fb = document.getElementById('modal-feedback');
+      fb.classList.remove('hidden');
+      setTimeout(() => {
+        closeBookingModal();
+        fb.classList.add('hidden');
+        e.target.reset();
+      }, 2000);
+    }
+
+    // 5. 3D Mouse Parallax
+    const stage = document.getElementById('hero-3d-stage');
+    window.addEventListener('mousemove', (e) => {
+      if (!stage) return;
+      const rect = stage.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = (e.clientX - cx) / (window.innerWidth / 2);
+      const dy = (e.clientY - cy) / (window.innerHeight / 2);
+      stage.style.transform = `rotateX(${-dy * 16}deg) rotateY(${dx * 16}deg)`;
+    });
+    window.addEventListener('mouseleave', () => {
+      if (stage) stage.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+
+    // 6. 3D Canvas Globe Engine
+    const canvas = document.getElementById('globeCanvas');
+    const ctx = canvas.getContext('2d');
+    let globeAngle = 0;
+    let isDragging = false;
+    let prevX = 0;
+
+    canvas.addEventListener('mousedown', (e) => { isDragging = true; prevX = e.clientX; });
+    window.addEventListener('mouseup', () => isDragging = false);
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        globeAngle += (e.clientX - prevX) * 0.01;
+        prevX = e.clientX;
+      }
+    });
+
+    // Touch events for mobile
+    canvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) { isDragging = true; prevX = e.touches[0].clientX; }
+    });
+    window.addEventListener('touchend', () => isDragging = false);
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging && e.touches.length === 1) {
+        globeAngle += (e.touches[0].clientX - prevX) * 0.01;
+        prevX = e.touches[0].clientX;
+      }
+    });
+
+    const points = [];
+    const numLat = 16, numLng = 28, radius = 135;
+    for (let i = 0; i <= numLat; i++) {
+      const theta = (i * Math.PI) / numLat;
+      for (let j = 0; j < numLng; j++) {
+        const phi = (j * 2 * Math.PI) / numLng;
+        points.push({
+          x: radius * Math.sin(theta) * Math.cos(phi),
+          y: radius * Math.cos(theta),
+          z: radius * Math.sin(theta) * Math.sin(phi)
+        });
+      }
+    }
+
+    const flightArcs = [
+      { from: { lat: 34.25, lon: -6.58 }, to: { lat: 48.85, lon: 2.35 }, progress: 0, speed: 0.0075, color: '#2563eb' },
+      { from: { lat: 34.25, lon: -6.58 }, to: { lat: 48.13, lon: 11.58 }, progress: 0.35, speed: 0.0068, color: '#059669' },
+      { from: { lat: 34.25, lon: -6.58 }, to: { lat: 45.50, lon: -73.56 }, progress: 0.65, speed: 0.0055, color: '#0284c7' },
+      { from: { lat: 34.25, lon: -6.58 }, to: { lat: 40.41, lon: -3.70 }, progress: 0.15, speed: 0.0090, color: '#d97706' }
+    ];
+
+    function latLonTo3D(lat, lon, r) {
+      const phi = (90 - lat) * (Math.PI / 180);
+      const theta = (lon + 180) * (Math.PI / 180);
+      return {
+        x: -(r * Math.sin(phi) * Math.cos(theta)),
+        y: r * Math.cos(phi),
+        z: r * Math.sin(phi) * Math.sin(theta)
+      };
+    }
+
+    function renderGlobe() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+
+      if (!isDragging) globeAngle += 0.004;
+      const cosA = Math.cos(globeAngle);
+      const sinA = Math.sin(globeAngle);
+
+      // Draw Dots
+      const dotColor = isDark ? 'rgba(148, 163, 184, 0.45)' : 'rgba(71, 85, 105, 0.35)';
+      for (let i = 0; i < points.length; i++) {
+        const p = points[i];
+        const rx = p.x * cosA - p.z * sinA;
+        const rz = p.x * sinA + p.z * cosA;
+        const ry = p.y;
+        if (rz > -35) {
+          const alpha = Math.max(0.08, (rz + radius) / (2 * radius));
+          const size = Math.max(1, ((rz + radius) / (2 * radius)) * 2);
+          ctx.fillStyle = dotColor;
+          ctx.beginPath();
+          ctx.arc(cx + rx, cy + ry, size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Draw Flight Arcs
+      flightArcs.forEach(arc => {
+        arc.progress = (arc.progress + arc.speed) % 1;
+        const v1 = latLonTo3D(arc.from.lat, arc.from.lon, radius);
+        const v2 = latLonTo3D(arc.to.lat, arc.to.lon, radius);
+
+        const rx1 = v1.x * cosA - v1.z * sinA;
+        const rz1 = v1.x * sinA + v1.z * cosA;
+        const ry1 = v1.y;
+
+        const rx2 = v2.x * cosA - v2.z * sinA;
+        const rz2 = v2.x * sinA + v2.z * cosA;
+        const ry2 = v2.y;
+
+        if (rz1 > -20 || rz2 > -20) {
+          const midX = (rx1 + rx2) / 2 * 1.25;
+          const midY = ((ry1 + ry2) / 2) - 25;
+
+          ctx.strokeStyle = arc.color + '44';
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(cx + rx1, cy + ry1);
+          ctx.quadraticCurveTo(cx + midX, cy + midY, cx + rx2, cy + ry2);
+          ctx.stroke();
+
+          // Particle
+          const t = arc.progress;
+          const px = (1 - t) * (1 - t) * rx1 + 2 * (1 - t) * t * midX + t * t * rx2;
+          const py = (1 - t) * (1 - t) * ry1 + 2 * (1 - t) * t * midY + t * t * ry2;
+
+          ctx.fillStyle = arc.color;
+          ctx.beginPath();
+          ctx.arc(cx + px, cy + py, 3.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      // Pin Kénitra Marker
+      const home = latLonTo3D(34.25, -6.58, radius);
+      const hx = home.x * cosA - home.z * sinA;
+      const hz = home.x * sinA + home.z * cosA;
+      const hy = home.y;
+      if (hz > -20) {
+        ctx.fillStyle = '#2563eb';
+        ctx.beginPath();
+        ctx.arc(cx + hx, cy + hy, 5, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = '#2563eb88';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(cx + hx, cy + hy, 8 + Math.sin(Date.now() * 0.005) * 3, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+      requestAnimationFrame(renderGlobe);
+    }
+    renderGlobe();
+  </script>
+</body>
+</html>
